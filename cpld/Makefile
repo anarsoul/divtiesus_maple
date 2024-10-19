@@ -10,4 +10,4 @@ clean:
 	rm -rf db incremental_db output_files
 
 report:
-	cat output_files/${REVISION}.*.smsg output_files/${REVISION}.*.rpt |grep -e Error -e Critical -e Warning |grep -v -e "Family doesn't support jitter analysis" -e "Force Fitter to Avoid Periphery Placement Warnings"
+	cat output_files/tld_divtiesus.*.smsg output_files/tld_divtiesus.*.rpt |grep -e Error -e Critical -e Warning |grep -v -e "Family doesn't support jitter analysis" -e "Force Fitter to Avoid Periphery Placement Warnings"

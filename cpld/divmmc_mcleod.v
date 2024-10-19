@@ -45,7 +45,7 @@ module divmmc_mcleod (
   output reg [5:0] sram_hiaddr,  // up to 512KB of SRAM can be addressed
   // SPI interface
   output wire sd_cs0_n,
-  output wire sd_cs1_n,
+  //output wire sd_cs1_n,
   output wire sd_sclk,
   output wire sd_mosi,
   input wire sd_miso  
@@ -199,7 +199,7 @@ module divmmc_mcleod (
     .oe(oe),
 
     .sd_cs0_n(sd_cs0_n),
-    .sd_cs1_n(sd_cs1_n),
+    //.sd_cs1_n(sd_cs1_n),
     .sd_sclk(sd_sclk),
     .sd_mosi(sd_mosi),
     .sd_miso(sd_miso)
@@ -219,7 +219,7 @@ module sd_card_control (
   output wire oe,
   
   output wire sd_cs0_n,   //
-  output wire sd_cs1_n,   //
+  //output wire sd_cs1_n,   //
   output wire sd_sclk,    // Interface SPI con la SD/MMC
   output wire sd_mosi,    //
   input wire sd_miso      //
@@ -230,8 +230,8 @@ module sd_card_control (
    DIVSPI  = 8'hEB;   // Puertos del DIVMMC
 
   reg [1:0] sdpincs = 2'b11;
-  assign sd_cs0_n = sdpincs[0];
-  assign sd_cs1_n = sdpincs[1];
+  assign sd_cs0_n = sdpincs[1];
+  //assign sd_cs1_n = sdpincs[1];
   
   // Control del pin CS de la SD
   wire iorq_wr = iorq_n | wr_n;

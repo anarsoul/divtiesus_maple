@@ -42,7 +42,7 @@ module tld_divtiesus (
   output wire mosi,
   input wire miso,
   output wire sd_cs0,
-  output wire sd_cs1,
+  // output wire sd_cs1,
   // Bus de control EEPROM y SRAM
   output wire eeprom_oe_n,
   output wire eeprom_we_n,
@@ -161,7 +161,7 @@ module tld_divtiesus (
     .sram_hiaddr(divmmc_sram_hiaddr),  // up to 512KB of SRAM can be addressed
     // SPI interface
     .sd_cs0_n(sd_cs0),
-    .sd_cs1_n(sd_cs1),
+    //.sd_cs1_n(sd_cs1),
     .sd_sclk(sclk),
     .sd_mosi(mosi),
     .sd_miso(miso)
