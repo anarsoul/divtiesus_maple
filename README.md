@@ -24,7 +24,7 @@ DivTIESUS Maple Edition is a SD/MMC card interface for the ZX Spectrum. It is ba
 
 # Schematic
 
-Schematics can be found ![here](out/schematics.pdf)
+Schematics can be found [here](out/schematics.pdf)
 
 # Build
 - First, you need the DivTIESUS Maple Edition PCB. You can order it from JLCPCB or from PCBWay using `divtiesus_maple_rev2.zip` file in out  directory.
@@ -32,7 +32,7 @@ Schematics can be found ![here](out/schematics.pdf)
 
 ## Bill of materials
 
-Interactive BOM can be found ![here](out/bom/ibom.html)
+Interactive BOM can be found [here](out/bom/ibom.html)
 
 Links to some components:
 
