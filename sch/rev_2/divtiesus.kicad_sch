@@ -16757,7 +16757,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "628128 "
+		(property "Value" "628128"
 			(at 39.37 46.355 0)
 			(effects
 				(font
@@ -18881,7 +18881,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 231.775 66.675 0)
 			(effects
 				(font
