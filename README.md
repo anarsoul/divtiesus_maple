@@ -38,6 +38,7 @@ Links to some components:
 
 |Qty|Component|Link|
 |--------|---------|--------|
+|1|EPM240T100|[link](https://www.aliexpress.com/item/1005003990429762.html)|
 |1|DIP switches, 2 position|[link](https://www.aliexpress.com/item/33027764033.html)|
 |1|RAM|[link](https://www.aliexpress.com/item/1005002495799688.html)|
 |1|EEPROM|[link](https://www.aliexpress.com/item/1005003773070206.html)|
