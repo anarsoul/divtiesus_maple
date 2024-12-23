@@ -184,3 +184,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to romcs
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to romoe2
 
 set_global_assignment -name AUTO_PACKED_REGISTERS_MAX "MINIMIZE AREA"
+
+set_location_assignment PIN_77 -to joy_enable
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to joy_enable
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to joy_enable

@@ -36,7 +36,8 @@ module tld_divtiesus (
   output tri nmi_n,
   // Interfaz de usuario
   input wire nmi_button_n,
-  input wire jumper_e,  // 1 = closed
+  input wire jumper_e,  // 0 = closed
+  input wire joy_enable, // 0 = closed
   // Interfaz SPI
   output wire sclk,
   output wire mosi,
@@ -90,10 +91,10 @@ module tld_divtiesus (
   reg [2:0] bit_clk = 3'b0;
   
   always @* begin
-    dout = oe_divmmc ? divmmc_dout :
-//           oe_modo   ? modo_dout :
-           oe_uart   ? uart_dout :
-           oe_joy    ? joy_dout :
+    dout = oe_divmmc               ? divmmc_dout :
+//           oe_modo                 ? modo_dout :
+           oe_uart                 ? uart_dout :
+           oe_joy && joy_enable    ? joy_dout :
                       8'bZZ;
   end
   assign d = dout;
@@ -117,7 +118,7 @@ module tld_divtiesus (
   assign romcs = (zxromcs == 1'b1 && notplus3 == 1'b1)? 1'b1 : 1'bz;
   assign romoe1 = (zxromcs == 1'b1 && notplus3 == 1'b0)? 1'b1 : 1'bz;
   assign romoe2 = (zxromcs == 1'b1 && notplus3 == 1'b0)? 1'b1 : 1'bz;
- 
+
   segajoy joy(
     // Scan frequency is 115200Hz, it takes 16 ticks to scan whole gamepad,
     // so poll frequency will be 7200 Hz or once in 0.14ms
