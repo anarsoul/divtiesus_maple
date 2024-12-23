@@ -59,7 +59,7 @@ Links to some components:
 After all the checks, proceed to build and solder the ZX Spectrum bus connector:
 
 ## ZX Spectrum bus connector
-- Take the 2x28 pin edge connector and cut about 1-2mm on each side to leave the ends opened, as in the last picture of this section.
+- Take the 2x28 pin edge connector and cut about 1-2mm on each side to leave the ends opened, refer to original DivTIESUS README.
 - Pull and extract the two metal contacts that are positioned at 5th place, where the index tab will be placed
 - Now take a small piece you can get from a PCB, 1.5mm thick and 7mm tall. This will be the index tab.
 - As an alternative, you can 3D-print the tab, you can find the model [here](https://www.thingiverse.com/thing:6556638)
