@@ -27,7 +27,7 @@ DivTIESUS Maple Edition is a SD/MMC card interface for the ZX Spectrum. It is ba
 Schematics can be found [here](out/schematics.pdf)
 
 # Build
-- First, you need the DivTIESUS Maple Edition PCB. You can order it from JLCPCB or from PCBWay using `divtiesus_maple_rev2.zip` file in out  directory.
+- First, you need the DivTIESUS Maple Edition PCB. You can order it from JLCPCB or from PCBWay using `divtiesus_maple_rev2.zip` file from out directory. There is also a [project on PCBWay](https://www.pcbway.com/project/shareproject/DivTIESUS_Maple_Edition_rev_2_c9d0d700.html) if you want to support me
 - Second, source the components. Most of the components are rather standard so you can buy it off DigiKey or Mouser. All of them can also be obtained from AliExpress. Be careful with components from Aliexpress, especially if the price is too good to be true
 
 ## Bill of materials
