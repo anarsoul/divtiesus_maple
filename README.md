@@ -71,7 +71,7 @@ Now the edge connector is ready to work as a ZX Spectrum rear bus connector!
 
 ## Enclosure
 
-Enclosure can be printed in pretty much any plastic. Personally, I printed it in PLA and PETG. ABS should work as well. Keep in mind that PLA will soften at ~60C, so avoid using it for enclosure if you are planning to use the device with an original machine. Modern clones are fine, they are usually using CMOS ICs and modern voltage regulators that do not produce much heat.
+Enclosure can be printed in pretty much any plastic. You need `button-2-nmi.stl`, `button-2-reset.stl`, `enclosure.stl` and `enclosure_top.stl` or `enclosure_top_no_jtag_no_switch.stl` if you don't want the holes for JTAG and the switch. Personally, I printed the parts in PLA and PETG. ABS should work as well. Keep in mind that PLA will soften at ~60C, so avoid using it for enclosure if you are planning to use the device with an original machine. Modern clones are fine, they are usually using CMOS ICs and modern voltage regulators that do not produce much heat.
 
 First, place the buttons, short button (reset) closer to the edge
 
