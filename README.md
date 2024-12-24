@@ -4,7 +4,7 @@ DivTIESUS Maple Edition is a SD/MMC card interface for the ZX Spectrum. It is ba
 # Features
 - DivMMC compatible interface with 8 KiB of EEPROM and 128 KiB or 512 KiB of RAM. Standard utils for EEPROM flashing, as provided by the ESXDOS team, are compatible with DivTIESUS.
 - Model autodetection. This means you don't need to put a jumper, or flip a switch to change from using it with a Spectrum 48K and a +3.
-- Tested with Harlequin 128 rev. 2D and rev. 4B. I don't have other machines at the moment. Any testing reports will be appreciated
+- Tested with original Spectrum+, Black +2, Harlequin 128 rev. 2D and rev. 4B, Karabas 128 rev. B1. More testing reports will be appreciated
 - It uses its own fast clock (24 MHz). It does not need the CPU clock at all.
 - NMI button to call file browser in ESXDOS, and handy RESET button.
 - MicroSD card slot
