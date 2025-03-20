@@ -1,6 +1,8 @@
 # [DivTIESUS Maple Edition](https://anarsoul.github.io/divtiesus_maple)
 DivTIESUS Maple Edition is a SD/MMC card interface for the ZX Spectrum. It is based on Miguel's [DivTIESUS](https://github.com/mcleod-ideafix/divtiesus), but adds joystick port and serial port for WiFi at the expense of Soft +3E feature. I redid whole project in KiCAD and rerouted the PCB. CPLD pin assignment has been changed to accommodate new PCB layout.
 
+You can [buy me a coffee](https://ko-fi.com/anarsoul) if you want to say thank you.
+
 # Features
 - DivMMC compatible interface with 8 KiB of EEPROM and 128 KiB or 512 KiB of RAM. Standard utils for EEPROM flashing, as provided by the ESXDOS team, are compatible with DivTIESUS.
 - Model autodetection. This means you don't need to put a jumper, or flip a switch to change from using it with a Spectrum 48K and a +3.
