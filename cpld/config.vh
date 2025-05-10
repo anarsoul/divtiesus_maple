@@ -25,11 +25,5 @@
     IOADDR = 16'hFC3B,
     IODATA = 16'hFD3B;
 
-// ZXUNO registers for UART (wifi module) handling
-  localparam UARTDATA = 8'hC6,
-             UARTSTAT = 8'hC7;
-
-// ZXUNO register for I2C master (bit-bang)
-  localparam I2CREG = 8'hF8;
-             
-
+  localparam NEXT_UART_TX = 16'h133B,
+             NEXT_UART_RX = 16'h143B;
