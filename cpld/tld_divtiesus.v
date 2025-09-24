@@ -66,6 +66,9 @@ module tld_divtiesus (
   wire nmi_to_cpu_n;
   wire allramplus3;
   
+  wire zxuno_regrd, zxuno_regwr;
+  wire [7:0] zxuno_addr;
+  
   wire [1:0] banco_rom;
   wire inrom48k = (banco_rom[1] | notplus3) & banco_rom[0];
  
@@ -184,6 +187,9 @@ module tld_divtiesus (
   modo modo_operacion (
     .clk(clk25mhz),
     .mrst_n(mrst_n),
+  //  .zxuno_addr(zxuno_addr),
+  //  .zxuno_regrd(zxuno_regrd),
+  //  .zxuno_regwr(zxuno_regwr),
   //  .din(d),
   //  .dout(modo_dout),
   //  .oe(oe_modo),
@@ -205,14 +211,27 @@ module tld_divtiesus (
     .sram_hiaddr(sram_hiaddr)  
   );
   
-  nextuart (
+  zxunoregs el_zxuno_esta_por_aqui (
     .clk(clk25mhz),
-    .bit_clk(bit_clk[2]),
-    .bit_clk4x(bit_clk[0]),
+    .rst_n(rst_n),    
     .a(a),
     .iorq_n(iorq_n),
     .rd_n(rd_n),
     .wr_n(wr_n),
+    //.m1_n(m1_n),
+    .din(d),
+    .addr(zxuno_addr),
+    .read_from_reg(zxuno_regrd),
+    .write_to_reg(zxuno_regwr)
+  );
+
+  zxunouart (
+    .clk(clk25mhz),
+    .bit_clk(bit_clk[2]),
+    .bit_clk4x(bit_clk[0]),
+    .zxuno_addr(zxuno_addr),
+    .zxuno_regrd(zxuno_regrd),
+    .zxuno_regwr(zxuno_regwr),
     .din(d),
     .dout(uart_dout),
     .oe (oe_uart),

@@ -23,14 +23,13 @@
 //
 //    Any distributed copy of this file must keep this notice intact.
 
-module nextuart (
+module zxunouart (
     input wire clk,
     input wire bit_clk,
     input wire bit_clk4x,
-    input wire [15:0] a,
-    input wire iorq_n,
-    input wire rd_n,
-    input wire wr_n,
+    input wire [7:0] zxuno_addr,
+    input wire zxuno_regrd,
+    input wire zxuno_regwr,
     input wire [7:0] din,
     output reg [7:0] dout,
     output reg oe,
@@ -49,8 +48,6 @@ module nextuart (
     reg leyendo_estado = 1'b0;
 
     wire data_read;
-    wire stat_read;
-    wire data_write;
 
     uart uartchip (
         .clk(clk),
@@ -67,9 +64,7 @@ module nextuart (
         .rts(uart_rts)
     );
 
-    assign data_read = (a == NEXT_UART_RX && iorq_n == 1'b0 && rd_n == 1'b0);
-    assign stat_read = (a == NEXT_UART_TX && iorq_n == 1'b0 && rd_n == 1'b0);
-    assign data_write = (a == NEXT_UART_TX && iorq_n == 1'b0 && wr_n == 1'b0);
+    assign data_read = (zxuno_addr == UARTDATA && zxuno_regrd == 1'b1);
 
     always @* begin
         oe = 1'b0;
@@ -78,14 +73,14 @@ module nextuart (
             dout = rxdata;
             oe = 1'b1;
         end
-        else if (stat_read) begin
-            dout = {6'h00, txbusy, data_received};
+        else if (zxuno_addr == UARTSTAT && zxuno_regrd == 1'b1) begin
+            dout = {data_received, txbusy, 6'h00};
             oe = 1'b1;
         end
     end
 
     always @(posedge clk) begin
-        if (data_write && comenzar_trans == 1'b0 && txbusy == 1'b0) begin
+        if (zxuno_addr == UARTDATA && zxuno_regwr == 1'b1 && comenzar_trans == 1'b0 && txbusy == 1'b0) begin
             comenzar_trans <= 1'b1;
         end
         if (comenzar_trans == 1'b1 && txbusy == 1'b1) begin
