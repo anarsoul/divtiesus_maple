@@ -88,3 +88,11 @@ Use 4 M2x8 screws to fix enclosure top
 
 ![](pics/screws.jpg)
 ![](pics/enclosure_2.jpg)
+
+## WiFi
+
+DivTiesus Maple Edition implements Zx-Uno-compatible UART, so software compiled for Zx-Uno should work with it.
+
+I recommend using Nihirash's software, [Netman](https://github.com/nihirash/netman-zx) and [Moon Rabbit](https://github.com/nihirash/moon-rabbit-zx). The binaries can be found [here](tools/wifi/zxwifi.zip) - just unpack them onto your SD card and run `netman/NETMAN.BAS` to configure WiFi. WiFi configuration is persistent, so it needs to be done once. Once WiFi is configured you can run `moon_rabbit/MOONR.BAS` to browse gopher sites.
+
+You can also check out my tool for transferring files from PC to Spectrum: [zxmit](https://github.com/anarsoul/zxmit)
